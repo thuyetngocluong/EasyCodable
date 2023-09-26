@@ -1,13 +1,20 @@
 # EasyCodable
-
-[![CI Status](https://img.shields.io/travis/Zoro4rk/EasyCodable.svg?style=flat)](https://travis-ci.org/Zoro4rk/EasyCodable)
-[![Version](https://img.shields.io/cocoapods/v/EasyCodable.svg?style=flat)](https://cocoapods.org/pods/EasyCodable)
-[![License](https://img.shields.io/cocoapods/l/EasyCodable.svg?style=flat)](https://cocoapods.org/pods/EasyCodable)
-[![Platform](https://img.shields.io/cocoapods/p/EasyCodable.svg?style=flat)](https://cocoapods.org/pods/EasyCodable)
+Codable syntax like [ObjectMapper](https://github.com/tristanhimmelman/ObjectMapper) and not throw error
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+```
+struct Ball: Codable {
+    var weight: Double
+    var colorHex: String
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.weight <- container[.weight]
+        self.colorHex <- container[.colorHex]
+    }
+}
+```
 
 ## Requirements
 
@@ -16,7 +23,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 EasyCodable is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-```ruby
+```
 pod 'EasyCodable'
 ```
 
