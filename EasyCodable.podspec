@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Zoro4rk' => 'thuyetngocluong@gmail.com' }
-  s.source           = { :git => 'https://github.com/Zoro4rk/EasyCodable.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/thuyetngocluong/EasyCodable.git', :tag => '1.0' }
   
   s.ios.deployment_target = '10.0'
 
