@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.name             = 'EasyCodable'
   s.version          = '1.2'
   s.summary          = 'A short description of EasyCodable.'
-
+  s.swift-version     = '5.0'
   s.description      = 'a'
   s.homepage         = 'https://github.com/Zoro4rk/EasyCodable'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
